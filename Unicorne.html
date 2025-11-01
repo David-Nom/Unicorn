@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unicorn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"><!--Bootstrap 5-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"><!--Pour les Icon-->
+  <style>
+    *{margin: 0; padding: 0;}
+    body{background-color: rgb(39, 38, 38); 
+      color: white; word-wrap: break-word;
+      font-family:Verdana, Geneva, Tahoma, sans-serif}
+    .bordered {
+      border: 1px solid black;
+    }
+    h4{
+      text-align: center;
+      font-size: xx-large;
+    margin-top: 10%;}
+    .grille-services {
+      display: flex;    
+        justify-content: center;                                            
+      text-align: center;                                             
+      background-image: url("./image noir/serviette.png");         
+      background-size: cover;                                 
+      padding-top: 10%;                                          
+      padding-bottom: 10%;
+    }
+     .grille-footer {
+      display: flex;                                                
+      text-align: center; 
+      justify-content: center;      
+      gap: 2rem;                                  
+      background-image: url("./image noir/serviette.png");         
+      background-size: cover;                                 
+    }
+    .grille-footer img:hover {/*zoom réseaux*/
+      scale: 1.5;                           
+    }
+    button {
+      padding: 1rem;
+      border-radius: 1rem;
+      color: white;
+      background-color: rgb(39, 38, 38);
+    }
+      button:hover {
+        scale: 1.5;
+    }
+    footer{
+      background-color: rgb(27, 27, 27);
+      color: white;
+    }
+        /* ==============================
+   STYLE DU BOUTON DE MENU
+   ============================== */
+#toggle-nav {
+  display: none; /* On cache la case à cocher (utilisée comme déclencheur) */
+}
+
+/* Style visuel du bouton menu */
+.menu-boutton {
+  background-color: #1a1818; /* Couleur de fond rouge */
+  color: rgb(255, 250, 250);              /* Texte blanc */
+  padding: 10px 20px;         /* Espacement intérieur */
+  border-radius: 8px;         /* Coins arrondis */
+  cursor: pointer;            /* Curseur "main" au survol */
+  font-size: 1rem;            /* Taille du texte */
+  display: inline-block;      /* Pour que le bouton s’affiche correctement */
+  margin: 1rem;               /* Petit espace autour */
+  
+}
+
+
+  /* BARRE DE NAVIGATION CACHÉE */
+nav {
+  color: white;
+  text-align: center;
+  overflow: hidden;          /* Cache le contenu pendant la fermeture */
+  max-height: 0;             /* Fermé par défaut */
+  transition: max-height 1s ease; /* Transition fluide sur 1s */
+  border-radius: 0 0 10px 10px;
+}
+
+/* ==============================
+   AFFICHAGE DU MENU AU CLIC
+   ============================== */
+/* Quand la case à cocher (#toggle-nav) est cochée,
+   on cible la balise <nav> qui vient après (~) */
+#toggle-nav:checked ~ nav {
+  max-height: 15rem; /* Hauteur du menu ouvert */
+}
+       nav ul {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      list-style-type: none; /*enlever les pts li*/
+    }
+a { font-size: larger;
+  text-decoration-line: none;
+      color: white;
+    }
+table:hover{
+  scale: 1.5;
+}
+.centretable {
+  display: flex;
+  justify-content: center;
+  width: auto;        /* évite de forcer 100% */
+  gap: 2rem;
+}
+#fond{background-color: #141414;}
+  </style>
+</head>
+
+
+<body class="container-fluid p-0">
+
+  <!-- Navbar -->
+<!-- ===== HEADER / NAVBAR BOOTSTRAP ===== -->
+<header>
+
+    <!-- Le label agit comme un bouton cliquable -->
+<label for="toggle-nav" class="menu-boutton" aria-label="Navigation principale"><i class="bi bi-three-dots"></i></label><!--rajouter un logo menu-->
+<i class="bi bi-reply-all"></i>
+<!-- Case à cocher cachée qui sert à stocker l’état (ouvert/fermé) -->
+<input type="checkbox" id="toggle-nav">
+    <!-- En-tête du site avec navigation principale -->
+    <nav>
+      <!-- ariale-label -->
+      <ul>
+        <li>
+          <a href=#info>À propos <i class="bi bi-exclamation-lg"></i></a>
+        </li>
+        <!-- moins de lien -->
+        <li>
+          <a href=#Reseaux>Contact <i class="bi bi-chat-left"></i></a>
+        </li>
+        <!-- moins de lien -->
+      </ul>
+      
+    </nav>
+
+
+</header>
+
+<main>
+  <div class="row g-0">
+    <!-- Sidebar -->
+    <div class="col-1  p-3"><!--colone gauche vide-->
+    </div>
+
+    <!-- Main content -->
+    <div class="col-10">
+      <div class="row g-0">
+        <div class="col-12  p-5 text-center"><img src="./images/1.png" alt="Logot du site" width="20%" loading="lazy"><br><button class="Dark"></button></div><!--image centrée + dark mode-->
+      </div>
+      <div class="row g-0">
+        <div class="col-8  p-3" id="info"><!--grid-3-->
+          
+          <h1>🦄 Unicorn Airsoft Hérault</h1><!--rajouter ico-->
+
+          <p>Bienvenue chez Unicorn Airsoft, une équipe passionnée basée dans le département de l’Hérault (34) !
+          Nous sommes un groupe de joueuses et joueurs unis par la même envie : partager de bons moments, du fair-play et de l’adrénaline autour de l’airsoft, 
+          dans une ambiance conviviale et respectueuse.</p>
+
+           <p> Nos parties se déroulent sur différents terrains de la région</p>
+
+        <h2>L’esprit Unicorn ?</h2>
+            <p> <i class="bi bi-caret-right-fill"></i> Respect, entraide et bonne humeur avant tout.</p>
+             <p><i class="bi bi-caret-right-fill"></i> Des scénarios variés (milsim, fun game, capture de drapeau, zombie, etc.).</p>
+           <p><i class="bi bi-caret-right-fill"></i> Un groupe ouvert à toutes et à tous, sans prise de tête. <i class="bi bi-pen"></i></p>
+        
+
+      </div>
+    
+      <div class="col-4  p-3"><!--grid-4-->    
+          <i class="bi bi-camera"></i> 
+          <img src="./images/Joueur.jpg" width="100%" alt="image d'un Joueur"/></div>
+      </div>
+      <h4>Parties à venir <i class="bi bi-calendar-event"></i></h4>
+      <div class="row g-0">
+
+        
+        <div class="col-12  p-3"><!--grid-5-->
+          <div class="grille-services" id="fond"><!--aligne-->
+    <!-- Sidebar -->
+ 
+<div class="centretable" >
+
+
+    <table class="table table-dark table-bordered">
+      <thead><tr><th colspan="2">Partie Programmée  <i class="bi bi-alarm"></i></th></tr></thead>
+      <tbody>
+        <tr><td>Date :</td><td>Aucune</td></tr>
+        <tr><td>Lieu :</td><td>Aucun</td></tr>
+        <tr><td>Places :</td><td>Aucune</td></tr>
+      </tbody>
+    </table>
+
+    <table class="table table-dark table-bordered ">
+      <thead><tr><th colspan="2">Partie Programmée  <i class="bi bi-alarm"></i></th></tr></thead>
+      <tbody>
+        <tr><td>Date :</td><td>Aucune</td></tr>
+        <tr><td>Lieu :</td><td>Aucun</td></tr>
+        <tr><td>Places :</td><td>Aucune</td></tr>
+      </tbody>
+    </table>
+
+    <table class="table table-dark table-bordered ">
+      <thead><tr><th colspan="2">Partie Programmée  <i class="bi bi-alarm"></i></th></tr></thead>
+      <tbody>
+        <tr><td>Date :</td><td>Aucune</td></tr>
+        <tr><td>Lieu :</td><td>Aucun</td></tr>
+        <tr><td>Places :</td><td>Aucune</td></tr>
+      </tbody>
+    </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+  <!-- Footer -->
+  <footer class="bordered text-center p-2" id="Reseaux"><!--Réseaux-->
+    <i class="bi bi-android" style="font-size: 3rem;" ></i>
+    <div class="grille-footer">
+    <img src="./images/snap..png" alt="Représente deux licorne menbre unicorn" width="5%" loading="lazy"/>
+    <img src="./images/tiktok.png" alt="Représente deux licorne menbre unicorn" width="5%" loading="lazy"/>
+    <img src="./images/instalogot.png" alt="Représente deux licorne menbre unicorn" width="5%" loading="lazy"/>
+    </div>
+    <p> <i class="bi bi-code-slash"></i> David R 2025</p>
+  </footer>
+<script>
+
+//Stockage Variables Dark Mode..
+
+
+let Sombre = document.querySelector(".Dark");
+let h = document.querySelectorAll("h1,h2,h3,.nav,a,body,footer");          //  NodeList
+let balisecolor = document.querySelectorAll("a");              //  liens à colorer
+let bar = document.querySelector(".nav") || document.querySelector(".bar"); //  au cas où
+
+
+let clair = localStorage.clair;  // Récuperation du mode par localStorage 
+  if (clair === undefined){ //clair n'hésite pas dans le localstorage on vas donc le définir
+    clair = true
+    }
+   if (clair === "true"){ //local storage n'enregistre que les string pas les booléen
+      clair = true
+    }
+       if (clair === "false"){
+      clair = false
+    }
+console.log("théme",clair); 
+
+
+
+theme(); //appelle
+
+
+
+
+function theme() {
+  
+// nuit
+if (!clair){
+    Sombre.style.backgroundColor = "#222";
+    Sombre.style.color = "black";                                  // 
+   Sombre.innerHTML = '<i class="bi bi-battery"></i>'; 
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "black";
+
+  
+
+    h.forEach(el => {                                          // boucler sur la NodeList (forEach vas chercher tous les éléments)
+      el.style.backgroundColor = "#222";
+      el.style.color = "white";
+    });
+
+    balisecolor.forEach(a => {                                 // boucler sur chaque lien
+      a.style.color = "black";
+    });
+
+  } else {//jour
+    Sombre.style.backgroundColor = "#222";
+    document.body.style.backgroundColor = "white";
+    Sombre.style.color = "black";
+   Sombre.innerHTML = '<i class="bi bi-battery-half"></i>'; // textecontent pour plus de sécutité
+
+    
+    if (bar) bar.style.backgroundColor = "white";              // éviter erreur si null
+
+    h.forEach(el => {                                          // boucler sur la NodeList
+      el.style.color = "black";
+      el.style.backgroundImage = "";
+      el.style.backgroundColor = "white"; 
+    });
+
+    balisecolor.forEach(a => {
+      a.style.color = "black";
+    });
+  }
+}
+//fonctionnaliter bouton changement background
+//Thème clair/sombre persistant via localStorage
+Sombre.onclick = function() {//action quand ont cliquera 
+ 
+  clair = !clair; //on inverse l'état     
+  // On stocke aussi la variable dans le localStorage
+    localStorage.clair = clair;
+
+
+  theme();
+
+
+
+
+
+
+
+
+
+};
+ 
+//fin fonction nuit/jour
+// *** remplacer .mouseover par des écouteurs sur chaque lien
+balisecolor.forEach(a => {
+  a.addEventListener("mouseover", function() { //réaction au click event
+    if (!clair){
+      a.style.color = "green"; // *** juste changer la couleur
+    } else {
+      a.style.color = "black";
+    }
+  });
+  a.addEventListener("mouseout", function() {
+    // *** remettre la couleur selon le thème
+    a.style.color = clair ? "black" : "white";
+  });
+});
+</script>
+  <!-- pas de police arrial google -->
+  <!-- théme sombre -->
+  <!-- pas beaucoup de lien -->
+  <!-- code compacte -->
+  <!-- couleurs écriture sombres -->
+
+  <!-- Mini-projet : version dynamique éco-conçue du site
+
+  Objectif : ajouter une interaction utile mais sobre au site HTML/CSS existant.
+
+  Fonctionnalités demandées
+
+  Menu burger fonctionnel (DOM + eventListener)
+
+  Thème clair/sombre persistant via localStorage
+
+  Chargement différé des images secondaires
+
+  Compteur d’économies : afficher le poids total économisé avec capture d'écran
+  + capture d'écran solution + probléme pendant les étape codages js
+  -->
+
+
+
+
+</script>
+</body>
+</html>
